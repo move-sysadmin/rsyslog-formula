@@ -33,7 +33,7 @@ workdirectory:
     - name: {{ rsyslog.workdirectory }}
     - user: {{ rsyslog.runuser }}
     - group: {{ rsyslog.rungroup }}
-    - mode: 755
+    - mode: 700
     - makedirs: True
 
 {% for filename in salt['pillar.get']('rsyslog:custom', ["50-default.conf"]) %}
